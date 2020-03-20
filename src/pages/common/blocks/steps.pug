@@ -1,0 +1,20 @@
+.steps__wrapper
+    .steps__item
+        span.steps__title Сроки
+        .steps__content
+            .stepsContent__text Закон предоставляет потребителю право «передумать» о покупке и вернуть товар в течение 14 дней (не считая дня приобретения), если он не подошел по форме, габаритам, фасону, расцветке, размеру или комплектации и т.д.
+                a.tooltip(data-text="*ст. 25 Закона «О защите прав потребителей»")
+                    .tooltip__inside
+                        img(src="/img/book.svg", alt="book")
+    .steps__item
+        span.steps__title Обращение к продавцу
+        .steps_content
+            p.stepsContent__text 
+                span.important__text Важно
+                | Вернуть товар можно в том случае, если он не был в употреблении, сохранены его товарный вид, потребительские свойства, пломбы, фабричные ярлыки и т.д.
+            include steps__list
+            include steps__columnList
+    .steps__item
+        span.steps__title Возврат денег за товар
+        .steps__content
+            include steps__timelist

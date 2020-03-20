@@ -1,0 +1,92 @@
+.case__banner
+    background-color: #fafafa
+    border-radius: 21px
+    padding-left: 64px
+    display: flex
+    height: 250px
+    @media (max-width: 640px) 
+        padding-left: 24px
+    @media (max-width: 540px) 
+        height: unset
+        padding-bottom: 38px
+
+    .banner
+
+        &__title
+            font-size: 24px
+            font-weight: bold
+            margin-top: 15px
+            margin-bottom: 12px
+        
+        &__content
+            display: flex
+            align-items: center
+            @media (max-width: 540px) 
+                flex-direction: column
+
+        &__list
+            width: 60%
+            @media (max-width: 540px) 
+                width: unset
+
+            .bannerList__item
+                padding-left: 34px
+                margin-bottom: 14px
+                line-height: 1.5
+                position: relative
+                @media (max-width: 640px) 
+                    font-size: 13px
+                
+                &::before
+                    content: ''
+                    position: absolute
+                    width: 6px
+                    height: 6px
+                    border-radius: 1px
+                    background-color: #58af32
+                    left: 16px
+                    top: 8px
+        &__info
+            width: 40%
+            height: 100%
+            text-align: center
+            display: flex
+            justify-content: center
+            align-items: center
+            background-image: url('/img/banner__image.svg')
+            background-repeat: no-repeat
+            background-position: center
+            background-size: cover
+            @media (max-width: 760px) 
+                background-image: none
+            @media (max-width: 540px) 
+                margin-top: 24px
+
+            .bannerInfo
+                
+                &__content
+
+                &__item
+                    margin-bottom: 13px
+                    font-size: 14px
+                    
+                    span 
+                        font-size: 20px
+                &__image
+                    width: 100px
+                    height: 100px
+                    border-radius: 22px
+                    box-shadow: 0 4px 24px 0 rgba(0, 0, 0, 0.08)
+                    background-color: #ffffff
+                    margin: 0 auto
+                    display: flex
+                    justify-content: center
+                    align-items: center
+            &_noimg
+                background-image: none
+
+                .bannerInfo__image
+                    width: 141px
+                    height: 78px
+                    background-color: none
+                    box-shadow: none

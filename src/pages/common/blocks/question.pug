@@ -1,0 +1,17 @@
+.question
+    .container
+        .question__block
+            .question__main
+                span.question__title Остались вопросы?
+                p.question__text Расскажем в деталях
+                form.question__form(action="#")
+                    .form__wrapper
+                        label.form__label(for="tel")
+                            span.input__title Номер телефона
+                            input.form__input#tel(type="tel")
+                        a.form__btn(href="#") Отправить
+                    input.hidden#check_hidden(type="checkbox")
+                    label.check__label(for="check_hidden") Согласен на 
+                        a.form__link(href="#") обработку персональных данных
+            .question__image
+                p.questionImg__text А что если здесь написать небольшой сопроводительный текст о том, что юридическая помощь онлайн - это легко и просто

@@ -1,0 +1,81 @@
+.steps__wrapper 
+    margin-top: 36px
+    padding-left: 64px
+    counter-reset: steps__title
+    @media (max-width: 540px) 
+        padding-left: 39px
+
+    .stepsContent__text
+        line-height: 1.5
+        margin-bottom: 15px
+        @media (max-width: 540px) 
+            font-size: 13px
+    .steps
+        &__item
+            padding-bottom: 35px
+            position: relative
+
+            &::before
+                content: ''
+                width: 1px
+                height: calc(100% - 23px)
+                background-color: #e4e4e4
+                position: absolute
+                left: -35px
+            
+            &:last-child
+                &::before
+                    display: none
+                
+                .steps__title::before
+                    content: ''
+                    background-color: #58af32
+                    width: 42px
+                    height: 28px
+                    border-radius: 32px
+                    left: -57px
+                    top: 0
+                
+                .steps__title::after
+                    content: ''
+                    width: 14px
+                    height: 11px
+                    background-image: url('/img/last__step.svg')
+                    background-repeat: no-repeat
+                    background-position: center
+                    background-size: contain
+                    left: -43px
+                    top: 8px
+
+        &__title
+            display: inline-block
+            font-family: 'Source Sans Pro', sans-serif
+            font-size: 24px
+            font-weight: bold
+            color: #333333
+            margin-bottom: 14px
+            position: relative
+            @media (max-width: 540px) 
+                font-size: 20px
+
+            &::before
+                counter-increment: steps__title
+                content: counter(steps__title)' '
+                position: absolute
+                left: -40px
+                top: -6px
+                color: #58af32
+                font-size: 24px
+                font-weight: bold
+                font-family: 'Source Sans Pro', sans-serif
+                background-color: #ffffff
+
+            &::after
+                content: 'шаг'
+                font-size: 14px
+                color: #808080
+                position: absolute
+                font-family: 'Rubik', sans-serif
+                left: -45px
+                top: 19px
+                background-color: #ffffff

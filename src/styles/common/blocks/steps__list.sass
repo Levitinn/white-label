@@ -1,0 +1,22 @@
+.steps__list
+    padding-left: 34px
+    margin-top: 10px
+
+    .stepsList
+
+        &__item
+            position: relative
+            margin-bottom: 15px
+            line-height: 1.5
+            @media (max-width: 540px) 
+                font-size: 13px
+            &::before
+                content: ''
+                position: absolute
+                width: 6px
+                height: 6px
+                background-color: #58af32
+                border-radius: 1px
+                top: 6px
+                left: -20px
+        

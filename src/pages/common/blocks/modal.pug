@@ -1,0 +1,16 @@
+.modal
+    .modal__layout
+    .modal__wrapper
+        form(action="#").modal__block
+            h5.modal__title Консультация с юристом 
+            span.modal__close
+            span.modal__subtitle Доступна как никогда
+            label.input__wrapper(for="modalTel")
+                span.input__title Номер телефона
+                input.modal__input#modalTel(type="tel")
+            input.hidden#modal_check(type="checkbox")
+            label.modal__accept(for="modal_check") Согласен на 
+                a.modal__link(href="#") обработку персональных данных,
+                | согласен с 
+                a.modal__link(href="#") условиями предоставления сервиса
+            a.modal__send(href="#") Получить консультацию

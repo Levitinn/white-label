@@ -1,0 +1,38 @@
+.social
+    display: flex
+    flex-direction: column
+    align-items: center
+    padding: 48px 0
+    @media (max-width: 540px) 
+        padding: 42px 0
+    &__text
+        font-size: 20px
+        @media (max-width: 540px) 
+            font-size: 14px
+
+    &__wrapper
+        display: flex
+        align-items: center
+        margin-top: 16px
+
+    &__item
+        width: 48px
+        height: 48px
+        border-radius: 8px
+        margin: 0 10px
+        display: flex
+        align-items: center
+        justify-content: center
+        cursor: pointer
+        @media (max-width: 540px) 
+            width: 42px
+            height: 42px
+
+        &_vk
+            background-color: #6a9fcc
+        &_fb
+            background-color: #4e81c7
+        &_tg
+            background-color: #36afee
+        &_wu
+            background-color: #65d534

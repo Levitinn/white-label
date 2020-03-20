@@ -1,0 +1,105 @@
+.toggler
+    
+    &__wrapper
+        margin-top: 16px
+    &__item
+        width: 100%
+        border-radius: 21px
+        background-color: #f7f7f7
+        margin-bottom: 10px
+        padding: 11px 64px
+        position: relative
+        transition: background-color 3s ease, box-shadow .3s ease
+        @media (max-width: 540px) 
+            padding-left: 16px
+
+        &_active
+            background-color: #ffffff
+            box-shadow: 0 3px 16px 0 rgba(0, 0, 0, 0.08)
+            .toggler__check
+                background-color: #fafafa
+                @media (max-width: 540px) 
+                    background-color: transparent
+                img
+                    transform: rotate(90deg)
+            .content__text
+                height: 100% !important
+    &__check
+        display: flex
+        justify-content: center
+        align-items: center
+        position: absolute
+        width: 42px
+        height: 28px
+        border-radius: 32px
+        background-color: #ffffff
+        left: 8px
+        top: 7px
+        cursor: pointer
+        @media (max-width: 540px) 
+            top: 15px
+            left: 13px
+            background-color: transparent
+            width: 10px
+            height: 5px
+        // transition: background-color .3s ease
+
+        img
+            width: 5px
+            height: 10px
+            transition: transform .4s ease
+    &__title
+        font-family: 'Rubik',sans-serif
+        font-size: 16px
+        font-weight: normal
+        color: #333333    
+        cursor: pointer
+        @media (max-width: 540px) 
+            font-size: 13px
+            padding-left: 20px
+
+    &__content
+        margin-top: 20px
+        display: none
+        @media (max-width: 540px) 
+            margin-top: 10px
+
+        .content
+
+            &__text
+                // height: 0%
+                font-size: 14px
+                margin-bottom: 10px
+                overflow: hidden
+                line-height: 1.38
+                transition: height .3s ease
+                @media (max-width: 540px) 
+                    font-size: 13px
+
+            &__link
+                color: #58af32
+                text-decoration: underline
+                &:hover
+                    text-decoration: none
+
+            &__list
+                padding-left: 20px
+                margin-bottom: 10px
+                .contentList__item
+                    font-size: 14px
+                    position: relative
+                    margin-bottom: 3px
+
+                    &::before
+                        content: ''
+                        position: absolute
+                        width: 4px
+                        height: 4px
+                        border-radius: 1px
+                        background-color: #58af32
+                        left: -14px
+                        top: 6px
+
+
+
+

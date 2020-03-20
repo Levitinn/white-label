@@ -1,0 +1,129 @@
+.modal
+    position: fixed
+    width: 100%
+    height: 100%
+    top: 0
+    left: 0
+    z-index: 1
+    display: none
+    &__layout
+        background-color: rgba(0, 0, 0, 0.76)
+        width: 100%
+        height: 100%
+        position: fixed
+        top: 0
+        left: 0
+        z-index: -1
+
+    &__wrapper
+        display: flex
+        align-items: center
+        justify-content: center
+        z-index: 3
+        width: 100%
+        height: 100%
+
+    &__block
+        display: flex
+        flex-direction: column
+        align-items: flex-start
+        background-color: white
+        max-width: 640px
+        width: 100%
+        border-radius: 12px
+        box-shadow: 0 8px 24px 0 rgba(0, 0, 0, 0.05)
+        background-color: #ffffff
+        margin: 0 auto
+        padding: 88px 72px 64px
+        position: relative
+        transform: translateY(200%)
+        transition: transform .3s ease
+
+
+    &__title
+        font-size: 36px
+        font-weight: bold
+        margin-bottom: 8px
+
+    &__subtitle
+        display: inline-block
+        font-size: 20px
+        color: #808080
+        margin-bottom: 48px
+
+    .input__wrapper
+        display: block
+        width: 100%
+        margin-bottom: 26px
+
+    .input__title
+        display: block
+        margin-bottom: 5px
+        color: #808080
+
+    &__input
+        width: 100%
+        font-size: 16px
+        padding: 20px 24px
+        border-radius: 8px
+        border: solid 1px #d0d0d0
+    
+    &__accept
+        display: inline-block
+        padding-left: 36px
+        position: relative
+        cursor: pointer
+        line-height: 1.38
+        margin-bottom: 48px
+
+        &::before
+            content: ''
+            width: 24px
+            height: 24px
+            border-radius: 4px
+            border: solid 1px #d0d0d0
+            position: absolute
+            top: 0
+            left: 0
+            background-image: url('/img/galka.svg')
+            background-repeat: no-repeat
+            background-position: center
+            background-size: 0%
+            transition: background-size .3s ease
+    
+    #modal_check:checked + .modal__accept::before
+        background-size: 85%
+
+    &__link
+        color: #58af32
+        text-decoration: underline
+    
+    &__send
+        display: inline-block
+        font-size: 20px
+        color: #ffffff
+        padding: 20px 0
+        text-align: center
+        width: 100%
+        max-width: 318px
+        border-radius: 8px
+        background-color: #58af32
+        align-self: center
+    
+    &__close
+        position: absolute
+        width: 48px
+        height: 48px
+        background-image: url('/img/close.svg')
+        background-repeat: no-repeat
+        background-position: center
+        background-size: contain
+        top: 16px
+        right: 16px
+        cursor: pointer
+
+.modal_active
+    
+    .modal__block
+        transform: translateY(0)
+    

@@ -1,0 +1,72 @@
+.steps__columnList
+    
+    .col__item::nth-child(2n)
+        display: none
+    
+    .columnList
+
+        &__text
+            line-height: 1.5
+            @media (max-width: 540px) 
+                font-size: 13px
+        
+        &__list
+            display: flex
+            justify-content: space-between
+            align-items: flex-start
+            margin-top: 20px
+            @media (max-width: 640px) 
+                flex-direction: column
+
+        &__col
+            width: 50%
+            display: flex
+            flex-direction: column
+            align-items: flex-start
+            padding-left: 40px
+            border-right: 2px solid #e4e4e4
+            @media (max-width: 640px) 
+                width: 100%
+                margin-bottom: 20px
+                border-right: none
+                border-bottom: 2px solid #e4e4e4
+                padding-bottom: 20px
+            
+            &:first-child
+                width: 45%
+                @media (max-width: 640px) 
+                    width: 100%
+
+            &:nth-child(2n)
+                border: none
+            
+            .col__item
+                margin-bottom: 15px
+                position: relative
+                @media (max-width: 640px) 
+                    font-size: 13px
+                &::before
+                    content: ''
+                    position: absolute
+                    width: 30px
+                    height: 25px
+                    background-image: url('/img/col-no.svg')
+                    background-repeat: no-repeat
+                    background-size: contain
+                    background-position: center
+                    left: -40px
+                    top: -4px
+                    @media (max-width: 640px) 
+                        width: 24px
+                        height: 20px
+                        background-size: contain !important
+
+                &:nth-child(2n)
+                    margin-bottom: 0
+                    
+                    &::before 
+                        background-image: url('/img/col-ok.svg')
+                        
+                    
+                
+                    

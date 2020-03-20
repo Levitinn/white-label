@@ -1,0 +1,42 @@
+@import "../mixins/media"
+
+.header 
+    padding-top: 36px
+    background-image: url('../img/main.png')
+    background-size: contain
+    background-position: right bottom
+    background-repeat: no-repeat 
+    padding-bottom: 260px
+    position: relative
+    @media (max-width: 540px) 
+        padding-bottom: 0
+
+    
+    
+    &__call
+        font-weight: 500
+        color: #58af32
+        border-bottom: 1px dashed
+        position: relative
+        margin-bottom: 94px
+        margin-left: 37px
+        &:hover
+            border-color: transparent
+
+        &::before
+            content: ''
+            position: absolute
+            width: 24px
+            height: 24px
+            background-image: url('../img/call.svg')
+            background-repeat: no-repeat
+            background-position: center
+            background-size: cover
+            top: -2px
+            left: -34px
+    &__title
+        font-size: 53px
+        font-weight: bold
+        color: #333333
+        // margin-bottom: 110px
+    
