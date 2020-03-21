@@ -1,0 +1,15 @@
+{  "parserOptions": {
+    "ecmaVersion": 6
+  },
+  "overrides": [
+    {
+      "files": [ "src/**/*.js" ],
+      "rules": {
+        "semi": [
+          "error",
+          "never"
+        ]
+      }
+    }
+  ]
+}
