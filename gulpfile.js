@@ -4,6 +4,7 @@ const pug2html = require('./gulp/tasks/pug2html')
 const styles = require('./gulp/tasks/styles')
 const script = require('./gulp/tasks/script')
 const fonts = require('./gulp/tasks/fonts')
+const docs = require('./gulp/tasks/docs')
 const imageMinify = require('./gulp/tasks/imageMinify')
 const clean = require('./gulp/tasks/clean')
 const copyDependencies = require('./gulp/tasks/copyDependencies')
@@ -20,7 +21,7 @@ const watch = function() {
     // ]);
 };
 
-const dev = gulp.parallel(pug2html, styles, script, fonts, imageMinify, svgSprite)
+const dev = gulp.parallel(pug2html, styles, script, fonts, docs, imageMinify, svgSprite)
 
 
 const build = gulp.series(clean, copyDependencies, dev)

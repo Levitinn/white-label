@@ -1,13 +1,21 @@
 $(document).ready(function(){
-    let cases = $('.cases')
-    // ------главные табы-----
-    $('.tabs__item').click(function(){
-        let target = $(this).attr('data-target')
+    let href = window.location.href
+    if (href.includes('ne-podoshel')){
         $('.tabs__item').removeClass('tabs__item_active')
-        $(this).addClass('tabs__item_active')
-        $('.cases').fadeOut('fast')
-        $(target).fadeIn('fast')
-    })
+        $('.tabs__item')[1].classList.add('tabs__item_active')
+    }
+    if (href.includes('kuplen')){
+        $('.tabs__item').removeClass('tabs__item_active')
+        $('.tabs__item')[2].classList.add('tabs__item_active')
+    }
+    // ------главные табы-----
+    // $('.tabs__item').click(function(){
+    //     let target = $(this).attr('data-target')
+    //     $('.tabs__item').removeClass('tabs__item_active')
+    //     $(this).addClass('tabs__item_active')
+    //     $('.cases').fadeOut('fast')
+    //     $(target).fadeIn('fast')
+    // })
 
     // -----аккордеон-----
 
@@ -25,6 +33,7 @@ $(document).ready(function(){
     $('.openModal').click(function(){
         $('.modal').fadeIn('fast').addClass('modal_active')
         $('body').css('overflow-y','hidden')
+        console.log(user)
         if (user.includes('Macintosh')){
             return
         } else {
@@ -40,11 +49,13 @@ $(document).ready(function(){
     })
 
     $(document).keydown(function(eventObject){
-        if (eventObject.which == 27)
+        if (eventObject.which == 27){
             $('.modal').removeClass('modal_active')
             $('.modal').fadeOut('fast')
             $('body').css('overflow-y','unset')
             $('html').css('padding-right','0')
+
+        }
     })
 
 })
