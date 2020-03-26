@@ -5,6 +5,8 @@ const styles = require('./gulp/tasks/styles')
 const script = require('./gulp/tasks/script')
 const fonts = require('./gulp/tasks/fonts')
 const docs = require('./gulp/tasks/docs')
+const files = require('./gulp/tasks/files')
+const mailer = require('./gulp/tasks/mailer')
 const imageMinify = require('./gulp/tasks/imageMinify')
 const clean = require('./gulp/tasks/clean')
 const copyDependencies = require('./gulp/tasks/copyDependencies')
@@ -21,7 +23,7 @@ const watch = function() {
     // ]);
 };
 
-const dev = gulp.parallel(pug2html, styles, script, fonts, docs, imageMinify, svgSprite)
+const dev = gulp.parallel(pug2html, styles, script, fonts, docs, files, mailer, imageMinify, svgSprite)
 
 
 const build = gulp.series(clean, copyDependencies, dev)

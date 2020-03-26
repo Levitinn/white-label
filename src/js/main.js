@@ -8,6 +8,43 @@ $(document).ready(function(){
         $('.tabs__item').removeClass('tabs__item_active')
         $('.tabs__item')[2].classList.add('tabs__item_active')
     }
+
+    // ------mailer----
+    $('#modalTel, #modal_check').change(function(){
+
+    })
+    $('.modal__send').click(function(){
+        let phone = $('#modalTel').val()
+        if (phone.length == 17 && $('#modal_check').is(':checked')){
+            $.ajax({
+                url: '../files/mail.php',
+                type: 'POST',
+                data: {
+                    tel: phone
+                },
+                success: function(data){
+                    console.log(data)
+                    $('.modal__subtitle, .modal .input__wrapper, .modal__accept').fadeOut()
+                }
+            })
+        } else {
+            if(phone.length != 17) {
+                $('.input__title').css('color','red')
+                $('.modal__input').addClass('modal__input_anim')
+                setTimeout(()=>{
+                    $('.modal__input').removeClass('modal__input_anim')
+                },1000)
+
+            } else {
+                $('.input__title').css('color','grey')
+            }
+            if (!($('#modal_check').is(':checked'))) {
+                $('.modal__accept').css('color','red')
+            } else {
+                $('.modal__accept').css('color','#333333')
+            }
+        }
+    })
     // ------главные табы-----
     // $('.tabs__item').click(function(){
     //     let target = $(this).attr('data-target')
@@ -33,12 +70,6 @@ $(document).ready(function(){
     $('.openModal').click(function(){
         $('.modal').fadeIn('fast').addClass('modal_active')
         $('body').css('overflow-y','hidden')
-        console.log(user)
-        if (user.includes('Macintosh')){
-            return
-        } else {
-            $('html').css('padding-right','15px')
-        }
     })
 
     $('.modal__close').click(function(){

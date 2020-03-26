@@ -39,17 +39,33 @@
         transform: translateY(200%)
         transition: transform .3s ease
 
+        @media (max-width: 760px) 
+            padding: 65px 50px 50px
+        
+        @media (max-width: 560px) 
+            padding: 25px 25px 30px
+
 
     &__title
         font-size: 36px
         font-weight: bold
         margin-bottom: 8px
 
+        @media (max-width: 760px) 
+            font-size: 30px
+        @media (max-width: 560px) 
+            font-size: 28px
+
     &__subtitle
         display: inline-block
         font-size: 20px
         color: #808080
         margin-bottom: 48px
+
+        @media (max-width: 760px) 
+            font-size: 18px
+        @media (max-width: 560px) 
+            font-size: 16px
 
     .input__wrapper
         display: block
@@ -67,6 +83,12 @@
         padding: 20px 24px
         border-radius: 8px
         border: solid 1px #d0d0d0
+        
+        @media (max-width: 760px) 
+            padding: 15px 24px
+            max-width: 300px
+        &_anim
+            animation: 1.2s ease-in-out 0s normal none running trambling-animation
     
     &__accept
         display: inline-block
@@ -109,6 +131,11 @@
         border-radius: 8px
         background-color: #58af32
         align-self: center
+
+        @media (max-width: 760px) 
+            font-size: 18px
+            max-width: 290px
+            padding: 18px 0
     
     &__close
         position: absolute
@@ -121,9 +148,35 @@
         top: 16px
         right: 16px
         cursor: pointer
+        
+        @media (max-width: 560px)
+            width: 40px
+            height: 40px
 
 .modal_active
     
     .modal__block
         transform: translateY(0)
     
+@keyframes trambling-animation 
+   0%, 50%, 100% 
+     transform: rotate(0deg)
+     -webkit-transform: rotate(0deg)
+     -moz-transform: rotate(0deg)
+     -o-transform: rotate(0deg)
+     -ms-transform: rotate(0deg)
+   
+   10%, 30% 
+     transform: rotate(-2deg)
+     -webkit-transform: rotate(-2deg)
+     -moz-transform: rotate(-2deg)
+     -o-transform: rotate(-2deg)
+     -ms-transform: rotate(-2deg)
+   
+   20%, 40% 
+     transform: rotate(2deg)
+     -webkit-transform: rotate(2deg)
+     -moz-transform: rotate(2deg)
+     -o-transform: rotate(2deg)
+     -ms-transform: rotate(2deg)
+   
