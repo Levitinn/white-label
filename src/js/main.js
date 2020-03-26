@@ -1,14 +1,18 @@
 $(document).ready(function(){
     let href = window.location.href
-    if (href.includes('ne-podoshel')){
+    if (href.includes('tovar_ne_nadlejashego_kacestva')){
         $('.tabs__item').removeClass('tabs__item_active')
         $('.tabs__item')[1].classList.add('tabs__item_active')
+    } else{
+        if (href.includes('kuplen')){
+            $('.tabs__item').removeClass('tabs__item_active')
+            $('.tabs__item')[2].classList.add('tabs__item_active')
+        } else {
+            $('.tabs__item').removeClass('tabs__item_active')
+            $('.tabs__item')[0].classList.add('tabs__item_active')
+        }
     }
-    if (href.includes('kuplen')){
-        $('.tabs__item').removeClass('tabs__item_active')
-        $('.tabs__item')[2].classList.add('tabs__item_active')
-    }
-
+    
     // ------mailer----
     $('#modalTel, #modal_check').change(function(){
 
@@ -23,7 +27,6 @@ $(document).ready(function(){
                     tel: phone
                 },
                 success: function(data){
-                    console.log(data)
                     $('.modal__subtitle, .modal .input__wrapper, .modal__accept, .modal__send').fadeOut()
                     $('.modal__title').text('Ваша заявка принята')
                 }
@@ -43,6 +46,40 @@ $(document).ready(function(){
                 $('.modal__accept').css('color','red')
             } else {
                 $('.modal__accept').css('color','#333333')
+            }
+        }
+    })
+
+    // ----форма на главной странице-----
+    $('.form__btn').click(function(){
+        let phone = $('#tel').val()
+        if (phone.length == 17 && $('#check_hidden').is(':checked')){
+            $.ajax({
+                url: './mail.php',
+                type: 'POST',
+                data: {
+                    tel: phone
+                },
+                success: function(data){
+                    $('.question__form').fadeOut()
+                    $('.question__text').text('Ваша заявка принята')
+                }
+            })
+        } else {
+            if(phone.length != 17) {
+                $('.input__title').css('color','red')
+                $('.form__input').addClass('modal__input_anim')
+                setTimeout(()=>{
+                    $('.form__input').removeClass('modal__input_anim')
+                },1000)
+
+            } else {
+                $('.input__title').css('color','grey')
+            }
+            if (!($('#check__label').is(':checked'))) {
+                $('.check__label').css('color','red')
+            } else {
+                $('.check__label').css('color','#333333')
             }
         }
     })
