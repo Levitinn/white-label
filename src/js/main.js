@@ -17,14 +17,15 @@ $(document).ready(function(){
         let phone = $('#modalTel').val()
         if (phone.length == 17 && $('#modal_check').is(':checked')){
             $.ajax({
-                url: '../files/mail.php',
+                url: './mail.php',
                 type: 'POST',
                 data: {
                     tel: phone
                 },
                 success: function(data){
                     console.log(data)
-                    $('.modal__subtitle, .modal .input__wrapper, .modal__accept').fadeOut()
+                    $('.modal__subtitle, .modal .input__wrapper, .modal__accept, .modal__send').fadeOut()
+                    $('.modal__title').text('Ваша заявка принята')
                 }
             })
         } else {
