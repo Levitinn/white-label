@@ -12,6 +12,6 @@ module.exports = function pug2html() {
     .pipe(pug())
     .pipe(htmlValidator())
     // .pipe(bemValidator())
-    .pipe(gulp.dest('build'))
+    .pipe(gulp.dest('build/tovar_ne_podoshel'))
 }
 

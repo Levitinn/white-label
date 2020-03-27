@@ -55,7 +55,7 @@ $(document).ready(function(){
         let phone = $('#tel').val()
         if (phone.length == 17 && $('#check_hidden').is(':checked')){
             $.ajax({
-                url: './mail.php',
+                url: '../mail.php',
                 type: 'POST',
                 data: {
                     tel: phone
