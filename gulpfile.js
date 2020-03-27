@@ -1,8 +1,8 @@
 const gulp = require('gulp')
 const serve = require('./gulp/tasks/serve')
 const pug2html = require('./gulp/tasks/pug2html')
-const secPage = require('./gulp/tasks/secPage')
-const thirdPage = require('./gulp/tasks/thirdPage')
+// const secPage = require('./gulp/tasks/secPage')
+// const thirdPage = require('./gulp/tasks/thirdPage')
 const styles = require('./gulp/tasks/styles')
 const script = require('./gulp/tasks/script')
 const fonts = require('./gulp/tasks/fonts')
@@ -25,7 +25,7 @@ const watch = function() {
     // ]);
 };
 
-const dev = gulp.parallel(pug2html, secPage, thirdPage, styles, script, fonts, docs, files, mailer, imageMinify, svgSprite)
+const dev = gulp.parallel(pug2html, styles, script, fonts, docs, files, mailer, imageMinify, svgSprite)
 
 
 const build = gulp.series(clean, copyDependencies, dev)
