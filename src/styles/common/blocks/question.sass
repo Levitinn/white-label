@@ -41,13 +41,13 @@
         display: flex
         justify-content: center
         align-items: center
-        background-image: url('./img/question.svg')
+        background-image: url('../img/question.svg')
         background-repeat: no-repeat
         background-position: top center
         background-size: contain
         @media (max-width: 705px) 
             width: unset
-            background-image: url('./img/question_mob.svg')
+            background-image: url('../img/question_mob.svg')
             background-position: left bottom
             padding-top: 104px
             padding-left: 36px
@@ -67,7 +67,7 @@
             font-size: 30px
 
     &__text
-        font-size: 24px
+        font-size: 22px
         color: #d0d0d0
         @media (max-width: 968px) 
             font-size: 20px
@@ -93,6 +93,8 @@
                 flex-direction: column
                 align-items: flex-start
                 flex-shrink: 0
+                @media (max-width: 400px) 
+                    width: 100%
             
             &__input
                 max-width: 260px
@@ -103,6 +105,9 @@
                 padding: 18px 6px
                 @media (max-width: 968px) 
                     padding: 11px 6px
+                
+                @media (max-width: 450px) 
+                    max-width: unset
 
             &__btn
                 max-width: 149px
@@ -119,11 +124,10 @@
 
                 @media (max-width: 968px) 
                     padding: 12px 0
-                
                 @media (max-width: 400px) 
+                    max-width: unset
                     margin-left: 0
                     margin-top: 12px
-                    max-width: 181px
 
         .input__title
             margin-bottom: 8px
@@ -145,7 +149,7 @@
                 background-color: #ffffff
                 left: 0
                 top: -4px
-                background-image: url('./img/galka.svg')
+                background-image: url('../img/galka.svg')
                 background-repeat: no-repeat
                 background-position: center
                 background-size: 0

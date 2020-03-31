@@ -3,19 +3,15 @@
 require_once('./phpmailer/PHPMailerAutoload.php');
 $mail = new PHPMailer;
 $mail->CharSet = 'utf-8';
-/*
-$name = $_POST['user_name'];
-$phone = $_POST['user_phone'];
-$filename = basename($_FILES['upload']['name']);
-$ext = substr($filename, strrpos($filename, '.') + 1);*/
 
-//$mail->SMTPDebug = 3;                               // Enable verbose debug output
+
+$mail->SMTPDebug = 3;                               // Enable verbose debug output
 
 
   
 $today = date("d.m.y");
 
-$phone=$_POST['tel'];
+$phone=$_REQUEST['tel'];
 if($phone){
 	$mail->isSMTP();                                      // Set mailer to use SMTP
 	$mail->Host = 'smtp.yandex.ru';  																							// Specify main and backup SMTP servers
@@ -24,27 +20,22 @@ if($phone){
 	$mail->Password = 'BCBD86jhgVqzqrDjQK7v'; // Ваш пароль от почты с которой будут отправляться письма
 	$mail->SMTPSecure = 'ssl';                            // Enable TLS encryption, `ssl` also accepted
 	$mail->Port = 465; // TCP port to connect to / этот порт может отличаться у других провайдеров
-	$mail->setFrom('site-noreply@amulex.ruн'); // от кого будет уходить письмо?
-	$mail->addAddress('levitinn@mail.ru');     // Кому будет уходить письмо 
-	//$mail->addAddress('ellen@example.com');               // Name is optional
-	//$mail->addReplyTo('info@example.com', 'Information');
-	//$mail->addCC('cc@example.com');
-	//$mail->addBCC('bcc@example.com');
-	//$mail->addAttachment('/var/tmp/file.tar.gz');         // Add attachments
-	// $mail->addAttachment($_FILES['uploaded_file']['tmp_name'], /*"$name.$ext"*/ $filename);    // Optional name
-	$mail->isHTML(true);                                  // Set email format to HTML
+	$mail->setFrom('site-noreply@amulex.ru'); // от кого будет уходить письмо?
+	//$mail->addAddress('nalog-call@amulex.ru'); 
+	$mail->addAddress('asamoylo@amulex.ru'); 
+	
 
-	$mail->Subject = "«Перезвонить для бесплатной консультации – лендинг возврат товара»";
-	$txt = "Телефон - ".phone."\r\n"; 
-	$headers = "From: amulex-no-replay@amulex.ru" . "\r\n";
-	print $mail->send();
 
+	$mail->isHTML(true); 
+	$mail->Subject = "«Перезвонить для бесплатной консультации – лендинг возврат товара»"; // Заголовок письма
+	$mail->Body = "Телефон - ".$phone."\r\n";; // Текст письма
+	// Результат
 	if(!$mail->send()) {
-	    echo "Thanks you!";
+	 echo 'Message could not be sent.';
+	 echo 'Mailer Error: ' . var_dump($mail->ErrorInfo);
 	} else {
-		echo 'Hello!';
-	    // echo "<script>parent.fileUploaded();</script>";
-
-	}	
+	 echo 'ok';
+	}
+	
 }
 ?>
