@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+  <g id="round-chevron_left-24px" transform="translate(32) rotate(90)">
+    <g id="Bounding_Boxes">
+      <path id="Path_101" data-name="Path 101" d="M0,0H32V32H0Z" fill="none"/>
+    </g>
+    <g id="Rounded" transform="translate(6.223 8.557)">
+      <path id="Path_102" data-name="Path 102" d="M16.808,6.807h0a1.328,1.328,0,0,0-1.88,0l-6.12,6.12a1.328,1.328,0,0,0,0,1.88l6.12,6.12a1.328,1.328,0,0,0,1.88,0h0a1.328,1.328,0,0,0,0-1.88l-5.173-5.187,5.173-5.173A1.34,1.34,0,0,0,16.808,6.807Z" transform="translate(-8.418 -6.418)" fill="#fff"/>
+    </g>
+    <g id="Rounded-2" data-name="Rounded" transform="translate(15.223 8.557)">
+      <path id="Path_102-2" data-name="Path 102" d="M16.808,6.807h0a1.328,1.328,0,0,0-1.88,0l-6.12,6.12a1.328,1.328,0,0,0,0,1.88l6.12,6.12a1.328,1.328,0,0,0,1.88,0h0a1.328,1.328,0,0,0,0-1.88l-5.173-5.187,5.173-5.173A1.34,1.34,0,0,0,16.808,6.807Z" transform="translate(-8.418 -6.418)" fill="#fff"/>
+    </g>
+  </g>
+</svg>

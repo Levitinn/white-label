@@ -127,6 +127,21 @@ $(document).ready(function(){
         }
     })
 
+    
+
+    $(window).scroll(function() {
+        if($(this).scrollTop() != 0) {
+            $('.top__btn').fadeIn()
+        } else {
+            $('.top__btn').fadeOut()
+        }
+        })
+        $('.top__btn').click(function() {
+        $('body,html').animate({scrollTop:0},800)
+    })
+        
+       
+
 })
 
 

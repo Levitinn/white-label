@@ -6,12 +6,37 @@
         @media (max-width: 540px) 
             padding-top: 42px
         
+        .top__btn
+            display: none
+            width: 42px
+            height: 42px
+            background-color: #58AF32
+            background-image: url('../img/top__btn.svg')
+            background-repeat: no-repeat
+            background-size: 30px
+            background-position: center
+            border-radius: 8px
+            position: fixed
+            right: 30px
+            bottom: 80px
+            opacity: .5
+            transition: opacity .3s ease
+            cursor: pointer
+            &:hover
+                opacity: 1
+
         .container
-        display: flex
-        flex-direction: column
-        align-items: center
+            display: flex
+            flex-direction: column
+            align-items: center
 
     .contacts
+        &__politic
+            color: #808080
+            margin-top: 8px
+            text-decoration: underline
+            &:hover
+                text-decoration: none
 
         &__links
             display: flex
