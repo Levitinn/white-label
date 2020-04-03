@@ -14,9 +14,26 @@
         text-align: right
         padding-bottom: 0
         
-
     @media (max-width: 540px) 
         padding-bottom: 0
+
+    &__back
+        color: #58af32
+        text-decoration: underline
+
+        @media (max-width: 1200px)
+            display: flex
+            padding: 0 30px
+
+    &_main
+        padding-bottom: 200px
+        background-image: url('../img/mainIn.png')
+        background-repeat: no-repeat
+        background-size: contain
+        background-position: right bottom
+        @media (max-width: 1200px)
+            background-image: none 
+            padding-bottom: 0
 
     .container
         @media (max-width: 1200px) 
@@ -25,8 +42,18 @@
             padding: 0
         @media (max-width: 540px) 
             padding: 0
-            
+
+    &__subtitle
+        font-size: 18px
+        display: inline-block
+        max-width: 415px
+        margin-top: 12px
+        line-height: 1.33
+        @media (max-width: 1200px)
+            display: none
+
     &__link-wrap
+
         @media (max-width: 1200px) 
             margin-bottom: 94px
             height: 366px
@@ -35,11 +62,27 @@
             background-repeat: no-repeat
             background-size: cover
             margin-bottom: 43px
+
         @media (max-width: 740px) 
             text-align: center
+
         @media (max-width: 540px) 
             background-image: url(../img/header__mob.jpg)
         
+    &__link_main
+
+        @media (max-width: 1200px) 
+            background-image: url(../img/main__tablet2.jpg)
+            background-position: top
+            background-repeat: no-repeat
+            background-size: cover
+
+        @media (max-width: 540px)
+            background-image: url(../img/main__mob2.jpg)
+            background-position: top
+            background-repeat: no-repeat
+            background-size: cover
+
     &__call
         font-weight: 500
         color: #58af32
