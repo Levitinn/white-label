@@ -3,14 +3,15 @@ $(document).ready(function(){
     if (href.includes('tovar_ne_nadlejashego_kacestva')){
         $('.tabs__item').removeClass('tabs__item_active')
         $('.tabs__item')[1].classList.add('tabs__item_active')
-    } else{
-        if (href.includes('kuplen')){
+    } 
+    if (href.includes('kuplen')){
             $('.tabs__item').removeClass('tabs__item_active')
             $('.tabs__item')[2].classList.add('tabs__item_active')
-        } else {
+    } 
+    if (href.includes('ne_podoshel')){
             $('.tabs__item').removeClass('tabs__item_active')
             $('.tabs__item')[0].classList.add('tabs__item_active')
-        }
+        
     }
     
     // ------mailer----
