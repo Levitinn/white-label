@@ -3,16 +3,33 @@ $(document).ready(function(){
     if (href.includes('tovar_ne_nadlejashego_kacestva')){
         $('.tabs__item').removeClass('tabs__item_active')
         $('.tabs__item')[1].classList.add('tabs__item_active')
-    } 
+        let onebtn = $('.main__btn')[0]
+        let secbtn = $('.main__btn')[2]
+        let thirdbtn = $('.main__btn')[1]
+        $(onebtn).attr('id','lawyer_page2_form2_click').attr('data-target','lawyer_page2_form2')
+        $(thirdbtn).attr('id','lawyer_page2_form3_click').attr('data-target','lawyer_page2_form3')
+        $(secbtn).attr('id','back_page2_form1_click').attr('data-target','back_page2_form1')
+        $('.header__call').attr('id','lawyer_link3').attr('data-target','lawyer_page2_form1')
+        $('.question__form').attr('id','question_page2_form1')
+        console.log('ne nadl')
+    } else {
+        $('.main__btn').attr('id','back_index_form1_click').attr('data-target','back_index_form1')
+        $('.header__call').attr('id','lawyer_link1').attr('data-target','lawyer_index_form1')
+        $('.question__form').attr('id','question_index_form1')
+    }
     if (href.includes('kuplen')){
-            $('.tabs__item').removeClass('tabs__item_active')
-            $('.tabs__item')[2].classList.add('tabs__item_active')
+        $('.tabs__item').removeClass('tabs__item_active')
+        $('.tabs__item')[2].classList.add('tabs__item_active')
+        $('.header__call').attr('id','lawyer_link4').attr('data-target','lawyer_page3_form1')
+        $('.question__form').attr('id','question_page3_form1')
     } 
     if (href.includes('ne_podoshel')){
-            $('.tabs__item').removeClass('tabs__item_active')
-            $('.tabs__item')[0].classList.add('tabs__item_active')
-        
-    }
+        $('.tabs__item').removeClass('tabs__item_active')
+        $('.tabs__item')[0].classList.add('tabs__item_active')
+        $('.main__btn').attr('id','back_page1_form1_click').attr('data-target','back_page1_form1')
+        $('.header__call').attr('id','lawyer_link2').attr('data-target','lawyer_page1_form1')
+        $('.question__form').attr('id','question_page1_form1')
+    } 
     
     // ------mailer----
     $('#modalTel, #modal_check').change(function(){
@@ -107,6 +124,9 @@ $(document).ready(function(){
 
     // ----modal----
     $('.openModal').click(function(){
+        let formId = $(this).attr('data-target')
+        $('.modal__block').attr('id', formId)
+        console.log(formId)
         $('.modal').fadeIn('fast').addClass('modal_active')
         $('body').css('overflow-y','hidden')
     })
