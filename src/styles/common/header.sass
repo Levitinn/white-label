@@ -8,6 +8,9 @@
     background-repeat: no-repeat 
     padding-bottom: 260px
     position: relative
+
+    &__empty
+        height: 18px
     @media (max-width: 1200px) 
         background-image: none
         padding-top: 52px
@@ -26,7 +29,7 @@
             padding: 0 30px
 
     &_main
-        padding-bottom: 270px
+        padding-bottom: 255px
         background-image: url('../img/mainIn1.png')
         background-repeat: no-repeat
         background-size: contain
@@ -49,8 +52,8 @@
         text-align: center
         margin-bottom: 52px
         line-height: 1.33
-        // @media (max-width: 1200px)
-        //     display: none
+        @media (max-width: 540px)
+            font-size: 16px
 
     &__link-wrap
 

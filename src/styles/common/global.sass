@@ -29,14 +29,19 @@ a:hover
     display: inline-block
     width: 36px
     height: 24px
+    margin-left: 4px
     text-align: center
     position: relative
     z-index: 2
     @media (max-width: 762px) 
-        display: block
+        // display: block
     &__inside
         background-color: #d0d0d0
         border-radius: 12px
+        display: flex
+        align-items: center
+        justify-content: center
+        height: 100%
 
     &:hover 
         .tooltip__inside
@@ -63,7 +68,7 @@ a:hover
         transition: opacity .3s ease
         border-radius: 12px
         z-index: -1
-        left: -5px
+        left: 0px
         bottom: -1px
         @media (max-width: 968px) 
             left: unset
@@ -81,6 +86,10 @@ a:hover
     color: #ffffff
     position: relative
     margin-left: 3px
+    transition: background-color .3s ease
+
+    &:hover
+        background-color: #6e6e6e
 
     &::before
         content: ''
@@ -135,3 +144,5 @@ input
 
 #first
     display: block
+b
+    font-weight: 500

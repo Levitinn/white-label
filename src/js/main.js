@@ -47,6 +47,23 @@ $(document).ready(function(){
                 success: function(data){
                     $('.modal__subtitle, .modal .input__wrapper, .modal__accept, .modal__send').fadeOut()
                     $('.modal__title').text('Ваша заявка принята')
+                    //---
+                     if (href.includes('tovar_ne_nadlejashego_kacestva')){
+                     	dataLayer.push({'event': 'page2_top_from1_success'})
+									        $('.modal__title').attr('id','page2_top_from1_success')
+									    } else {
+									    	dataLayer.push({'event': 'page_top_from1_success'})
+									        $('.modal__title').attr('id','page_top_from1_success')
+									    }
+									    if (href.includes('kuplen')){
+									    	dataLayer.push({'event': 'page4_top_from1_success'})
+									        $('.modal__title').attr('id','page4_top_from1_success')
+									    } 
+									    if (href.includes('ne_podoshel')){
+									    	dataLayer.push({'event': 'page1_top_from1_success'})
+									        $('.modal__title').attr('id','page1_top_from1_success')
+									    } 
+                    //---
                 }
             })
         } else {
@@ -81,6 +98,23 @@ $(document).ready(function(){
                 success: function(data){
                     $('.question__form').fadeOut()
                     $('.question__text').text('Ваша заявка принята')
+                    //---
+                     if (href.includes('tovar_ne_nadlejashego_kacestva')){
+                     	dataLayer.push({'event': 'page2_back_from2_success'})
+									        $('.question__text').attr('id','page2_back_from2_success')
+									    } else {
+									    	dataLayer.push({'event': 'page_back_from2_success'})
+									        $('.question__text').attr('id','page_back_from2_success')
+									    }
+									    if (href.includes('kuplen')){
+									    	dataLayer.push({'event': 'page4_back_from2_success'})
+									        $('.question__text').attr('id','page4_back_from2_success')
+									    } 
+									    if (href.includes('ne_podoshel')){
+									    	dataLayer.push({'event': 'page1_back_from2_success'})
+									        $('.question__text').attr('id','page1_back_from2_success')
+									    } 
+                    //---
                 }
             })
         } else {

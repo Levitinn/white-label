@@ -1,5 +1,11 @@
 .stats
     padding-bottom: 177px
+    @media (max-width: 540px) 
+        padding-bottom: 50px
+
+    &__content
+        @media (max-width: 540px) 
+            text-align: center
     &__list
         display: flex
         align-items: center
@@ -10,7 +16,7 @@
 
     &__item
         display: flex
-        align-items: flex-end
+        align-items: center
 
         @media (max-width: 968px)
             align-items: center
